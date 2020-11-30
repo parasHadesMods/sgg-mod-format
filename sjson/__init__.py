@@ -399,7 +399,7 @@ def dump(obj, fp, indent=None):
         fp.write(e)
 
 
-def _encode(obj, separators=('', '\n', ' = '), indent=0, level=0):
+def _encode(obj, separators=(',', '\n', ' = '), indent=0, level=0):
     if obj is None:
         yield 'null'
     # Must check for true, false before number, as boolean is an instance of
